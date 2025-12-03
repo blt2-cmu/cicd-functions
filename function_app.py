@@ -51,15 +51,14 @@ def analyze_number(num):
     elif num <= 3:
         is_prime = True
     elif num % 2 == 0 or num % 3 == 0:
-        is_prime == False
-    elif num > 24:
+        is_prime = False
+    else:
         i = 5
         while i * i <= num:
-            if n % i == 0:
+            if num % i == 0 or num % (i + 2) == 0:
                 is_prime = False
-            i += 1
-    else:
-        is_prime = True
+                break
+            i += 6
 
     # TODO 4: Code Logic to check whether number is odd
     is_odd = (num % 2 == 1)
