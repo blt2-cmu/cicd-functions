@@ -45,7 +45,7 @@ def analyze_number(num):
         sum_of_digits += int(digit)
         
     # TODO 3: Code Logic to check whether number is prime
-    is_prime = bool()
+    is_prime = True
     if num == 1:
         is_prime = False
     elif num <= 3:
@@ -55,9 +55,9 @@ def analyze_number(num):
     elif num > 24:
         i = 5
         while i * i <= num:
-            if n % i == 0 or n % (i + 2) == 0:
+            if n % i == 0:
                 is_prime = False
-            i += 6
+            i += 1
     else:
         is_prime = True
 
