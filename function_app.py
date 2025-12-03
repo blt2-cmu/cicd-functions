@@ -28,7 +28,7 @@ def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
     else:
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a number in the query string or in the request body.",
-             status_code=200
+             status_code=200)
 
 # TODO: Implement the analyze_number function
 # You will only make modifications to the function below
