@@ -40,7 +40,9 @@ def analyze_number(num):
         return {"error": "please enter a number greater than 0"}
 
     # TODO 2: Code Logic to find the sum of numbers
-    sum_of_digits = sum(int(digit)) for digit in str(num)
+    sum_of_digits = 0
+    for digit in str(num):
+        sum_of_digits += int(digit)
         
     # TODO 3: Code Logic to check whether number is prime
     is_prime = True
