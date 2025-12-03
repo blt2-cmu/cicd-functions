@@ -45,19 +45,20 @@ def analyze_number(num):
         sum_of_digits += int(digit)
         
     # TODO 3: Code Logic to check whether number is prime
-    is_prime = True
     if num == 1:
         is_prime = False
     elif num <= 3:
         is_prime = True
     elif num % 2 == 0 or num % 3 == 0:
         is_prime == False
-    else:
+    elif num > 24:
         i = 5
         while i * i <= num:
             if n % i == 0 or n % (i + 2) == 0:
                 is_prime = False
             i += 6
+    else:
+        is_prime = True
 
     # TODO 4: Code Logic to check whether number is odd
     is_odd = (num % 2 == 1)
