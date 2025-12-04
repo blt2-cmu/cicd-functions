@@ -1,7 +1,7 @@
 {
     "github_username": "blt2-cmu",
     "repository": "cicd-functions",
-    "token": "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",
+    "token": "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",
     "function_app_name": "bt-num-analyzer",
     "task2_function_endpoint": "https://bt-num-analyzer-e9bvbycwc3hqgjdg.eastus-01.azurewebsites.net/api/http_trigger"
 }
