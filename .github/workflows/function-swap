@@ -1,3 +1,5 @@
+name: function swap
+
 on:
   pull_request:
     branches: [main]
