@@ -2,6 +2,7 @@ import azure.functions as func
 import datetime
 import json
 import logging
+import math
 
 app = func.FunctionApp()
 
@@ -71,12 +72,24 @@ def analyze_number(num):
     is_perfect = (num == sum_divisors)
     # TODO 6: Replace default values below with the results of the calculations from
     # TODOs 2-5.
+    is_triangular = bool()
+    num_root = int(math.sqrt((8 * num) + 1))
+    if num <= 0:
+        is_triangular = False
+    elif num_root * num_root != num:
+        is_triangular = False
+    elif not isinstance((num_root - 1) / 2, int):
+        is_triangle = False
+    else:
+        is_triangular = True
+
 
     response = {
         "sum_of_digits": sum_of_digits,
         "is_prime": is_prime,
         "is_odd": is_odd,
-        "is_perfect": is_perfect
+        "is_perfect": is_perfect,
+        "is_triangular": is_triangular
     }
 
     return response
