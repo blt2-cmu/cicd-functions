@@ -72,13 +72,20 @@ def analyze_number(num):
     is_perfect = (num == sum_divisors)
     # TODO 6: Replace default values below with the results of the calculations from
     # TODOs 2-5.
+    # Logic: A number is triangular if 8 * num + 1 is a perfect square.
+    discriminant = (8 * num) + 1
+    root = int(math.sqrt(discriminant))
+    
+    # We check if root squared equals the discriminant (not num!)
+    is_triangular = (root * root == discriminant)
 
 
     response = {
         "sum_of_digits": sum_of_digits,
         "is_prime": is_prime,
         "is_odd": is_odd,
-        "is_perfect": is_perfect
+        "is_perfect": is_perfect,
+        "is_triangular": is_triangular
     }
 
     return response
